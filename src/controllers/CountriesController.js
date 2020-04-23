@@ -3,7 +3,7 @@ import getCountriesList from "../services/CountriesService.js";
 const router = express.Router();
 
 const successView = (res, viewName) => {
-  return (data) => res.render(viewName, { data: data.locations });
+  return (data) => res.render(viewName, { data: data });
 };
 
 const errorView = (res, viewName) => {
