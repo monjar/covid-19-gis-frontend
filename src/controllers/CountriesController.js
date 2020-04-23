@@ -1,15 +1,17 @@
 import express from "express";
 import getCountriesList from "../services/CountriesService.js";
-import asyncHandler from "express-async-handler";
 const router = express.Router();
-const renderViewOnResponse = (res, viewName) => {
-  return (data) => {
-    console.log(JSON.stringify(data));
-    res.render(viewName);
-  };
+
+const successView = (res, viewName) => {
+  return (data) => res.render(viewName, { data: data.locations });
 };
+
+const errorView = (res, viewName) => {
+  return () => res.render(viewName);
+};
+
 router.get("/", (req, res) => {
-  getCountriesList(renderViewOnResponse(res, "list"));
+  getCountriesList(successView(res, "list"), errorView(res, "err"));
 });
 
 export default router;
