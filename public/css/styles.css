@@ -1,18 +1,169 @@
-html,
-body {
-  margin: 0;
-  min-height: 100%;
+html {
+  margin: none;
+  padding: none;
 }
-.tableContainer {
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: #e9f8f7;
+  margin: none;
+  padding: none;
+}
+.headstick {
+  -webkit-box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
+  -moz-box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
+  box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
+  position: sticky;
+  top: 0px;
+}
+
+.info {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 50px 0 25px 0;
+  color: #2b7a78;
+  font-weight: 900;
+}
+
+.devider {
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 3px solid #17252a;
+}
+
+.subinfo {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 25px 0 50px 0;
+  color: #2b7a78;
+  font-weight: 900;
+  padding: 0 40px;
+}
+
+.wrapper {
+  margin: 0 auto;
   width: 80%;
 }
+
 table {
-  text-align: center;
   width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 0 4px 15px 1px rgba(31, 30, 30, 0.411);
+  -moz-box-shadow: 0 4px 15px 1px rgba(31, 30, 30, 0.411);
+  box-shadow: 0 4px 15px 1px rgba(31, 30, 30, 0.411);
 }
+
+.flatcolor thead {
+  background: #3aafa9;
+}
+
+thead {
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
 th {
-  background: white;
-  position: sticky;
+  text-align: center;
+  padding: 25px;
+}
+
+td {
+  text-align: center;
+  padding: 15px 0;
+  color: #808080;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+td {
+  padding: 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+tbody tr:hover {
+  background: #e9e9e9;
+}
+
+tbody tr:active {
+  background: #dfdfdf;
+}
+
+.sticked {
   top: 0;
-  box-shadow: 0 5px 2px -1px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: auto;
+  display: none;
+  border: none;
+}
+.filler {
+  display: block;
+  width: 100%;
+  height: 820px;
+  background: transparent;
+  color: #c0e3d8;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.propLabel {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .indexNum {
+    display: none;
+  }
+  .propLabel {
+    display: contents;
+    color: #17252a;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody td {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    -webkit-box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
+    -moz-box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
+    box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
+  }
+  tr {
+    -webkit-box-shadow: 0 4px 15px 1px rgba(50, 50, 50, 0.411);
+    -moz-box-shadow: 0 4px 15px 1px rgba(50, 50, 50, 0.411);
+    box-shadow: 0 4px 15px 1px rgba(50, 50, 50, 0.411);
+  }
+
+  .cardInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: #3aafa9;
+    border-style: inset;
+    border-width: 0 0 2px 0;
+  }
+  .countryCardHeader {
+    background: #3aafa9;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
 }

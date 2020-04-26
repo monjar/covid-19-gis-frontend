@@ -12,46 +12,71 @@
 
     <meta charset="utf-8" />
   </head>
-  <body >
-    <div
-      class=" d-flex align-items-center flex-column justify-content-center  bg-dark text-white p-3 "
-    >
-      <div class="h1 mb-1">
-        Corona cases in countries around the world 
-      </div>
-   
+  <body>
+    <div class="info">Corona virus status around the world</div>
+    <div class="devider"></div>
+    <div class="subinfo">
+      RESIZE BROWSER OR PREVIEW WINDOW TO SEE THE REPONSIVENESS
+    </div>
 
-      <div class="d-flex align-items-center flex-column justify-content-center p-3 tableContainer">
-      
-          <table class="table">
-            <thead>
-              <tr >
-                <th>#</th>
-                <th>Country</th>
-                <th>Population</th>
-                <th>Confirmed Cases</th>
-                <th>Deaths</th>
-                <th>Recovered</th>
-              </tr>
-            </thead>
-            <tbody >
-              <% 
-              let index=1;
-              Object.entries(data).forEach(([key, value]) => {%>
-                <tr class="list-group-item-info">
-                  <td><%= index++ %></td>
-                  <td><%= key %></td>
-                  <td><%= value.population %></td>
-                  <td><%= value.confirmed %></td>
-                  <td><%= value.deaths %></td>
-                  <td><%= value.recovered %></td>
-                </tr>
-                  
-                <% }); %>
-              
-            </tbody>
-          </table>
-        
+    <div class="wrapper">
+      <table class="flatcolor">
+        <thead class="headstick">
+          <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th>Population</th>
+            <th>Confirmed Cases</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% let index=1; const s="countryCardHeader";
+          Object.entries(data).forEach(([key, value]) => {%>
+          <tr class="list-group-item-info">
+            <%if (1===1){%>
+            <td class="indexNum">
+              <div class="d-flex flex-row justify-content-center">
+                <div><%= index++ %></div>
+              </div>
+            </td>
+            <td class="countryCardHeader">
+              <div class="d-flex flex-row justify-content-center">
+                <div><%= key %></div>
+              </div>
+            </td>
+            <td>
+              <div class="cardInfo">
+                <div class="propLabel">Population:</div>
+                <div><%= value.population %></div>
+              </div>
+            </td>
+            <td>
+              <div class="cardInfo">
+                <div class="propLabel">Confirmed Cases:</div>
+                <div><%= value.confirmed %></div>
+              </div>
+            </td>
+            <td>
+              <div class="cardInfo">
+                <div class="propLabel">Deaths:</div>
+                <div><%= value.deaths %></div>
+              </div>
+            </td>
+            <td>
+              <div class="cardInfo">
+                <div class="propLabel">Recovered:</div>
+                <div><%= value.recovered %></div>
+              </div>
+            </td>
+            <%}%>
+          </tr>
+
+          <% }); %>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
