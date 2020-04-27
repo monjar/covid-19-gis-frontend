@@ -4,7 +4,7 @@ const logger = getLogger("errors");
 const router = express.Router();
 
 router.get("*", (req, res) => {
-  //   logger.error(`request to ${req.url} not found`);
+  logger.error(`request to ${req.originalUrl} not found`);
   res.render("notfound");
 });
 
