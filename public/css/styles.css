@@ -14,9 +14,20 @@ body {
   -webkit-box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
   -moz-box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
   box-shadow: 0px 13px 28px 5px rgba(167, 167, 167, 0.4);
-  position: sticky;
   position: -webkit-sticky;
-
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+.headcolstick {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  background-color: #3aafa9;
+  color: #f0f0f0;
   top: 0px;
 }
 
@@ -59,15 +70,6 @@ table {
   box-shadow: 0 4px 15px 1px rgba(31, 30, 30, 0.411);
 }
 
-.tableBase thead {
-  background: #3aafa9;
-}
-
-thead {
-  text-transform: uppercase;
-  color: #f0f0f0;
-}
-
 th {
   text-align: center;
   padding: 25px;
@@ -107,7 +109,6 @@ tbody tr:active {
   text-align: center;
   font-size: 35px;
   font-weight: 900;
-  text-transform: uppercase;
 }
 .propLabel {
   display: none;
@@ -150,7 +151,7 @@ tbody tr:active {
     justify-content: space-between;
     border-bottom: #3aafa9;
     border-style: inset;
-    border-width: 0 0 2px 0;
+    border-width: 0 0 1px 0;
   }
   .countryCardHeader {
     background: #3aafa9;
@@ -162,7 +163,7 @@ tbody tr:active {
     font-size: 20px;
   }
 }
-#main {
+.errContainer {
   color: #3aafa9;
   margin: 0;
   display: table;
@@ -171,12 +172,12 @@ tbody tr:active {
   text-align: center;
 }
 
-.fof {
+.errorText {
   display: table-cell;
   vertical-align: middle;
 }
 
-.fof h1 {
+.errorText h1 {
   font-size: 50px;
   display: inline-block;
   padding-right: 12px;
