@@ -1,6 +1,6 @@
 import axios from "axios";
 import { cleanCountriesData } from "../utils/DataHandler.js";
-const apiURL = process.env.API_URL;
+const apiURL = "http://covid19api.xapix.io/v2/locations";
 
 const getCountriesList = (passDataToView, passErrorView) => {
   axios

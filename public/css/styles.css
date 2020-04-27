@@ -138,7 +138,7 @@ tbody tr:active {
   }
   table {
     border-collapse: separate;
-    border-spacing: 0 20px;
+    border-spacing: 0 3rem;
     -webkit-box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
     -moz-box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
     box-shadow: 0 4px 15px 1px rgba(3, 3, 3, 0);
