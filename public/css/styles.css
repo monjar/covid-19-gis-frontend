@@ -96,13 +96,6 @@ tbody tr:active {
   background: #dfdfdf;
 }
 
-.sticked {
-  top: 0;
-  position: fixed;
-  width: auto;
-  display: none;
-  border: none;
-}
 .filler {
   display: block;
   width: 100%;
